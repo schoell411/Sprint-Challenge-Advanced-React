@@ -4,9 +4,9 @@ class Players extends Component {
   render() {
     return(
       <div>
-        <h1>{this.props.player.name}</h1>
-        <h3>{this.props.player.country}</h3>
-        <h3>{this.props.player.searches}</h3>
+        <h2>{this.props.player.name}</h2>
+        <h4>{this.props.player.country}</h4>
+        <h4>{this.props.player.searches}</h4>
       </div>
     )
   }

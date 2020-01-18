@@ -2,14 +2,21 @@ import React, {Component} from 'react';
 import './App.css';
 import axios from 'axios';
 
+//components
+import Players from './components/Players';
+
 class App extends Component {
+
+  state = {
+    players : []
+  }
 
   axiosFetch = () => {
     axios
     .get(`http://localhost:5000/api/players`)
     .then(res =>{
       console.log(res);
-      console.log(res.data[0].name);
+      this.setState({players : res.data})
     })
     .catch(error => {
       console.log(error);
@@ -24,6 +31,13 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Women's World Cup Players </h1>
+        <div>
+          {this.state.players.map(player => 
+            <Players 
+              player={player} key={player.id}
+            />
+          )}
+        </div>
       </div>
     );
   }
