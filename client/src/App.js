@@ -33,8 +33,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Women's World Cup Players </h1>
         <DarkSwitch />
+        <h1>Women's World Cup Players </h1>
+        
         <div>
           {this.state.players.map(player => 
             <Players 

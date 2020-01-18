@@ -14,11 +14,17 @@ const DarkSwitch = () => {
   };
 
   return (
-    <div className="dark-mode_toggle">
-      <div
-        onClick={toggleMode}
-        className={darkMode ? 'toggle toggled' : 'toggle'}
-      />
+    <div className="topNav">
+      <h4>Dark Mode</h4>
+      <div className="switch">
+      <div className="dark-mode_toggle">
+        <div
+          onClick={toggleMode}
+          className={darkMode ? 'toggle toggled' : 'toggle'}
+        />
+      </div>
+      {/* <h4>Dark Mode</h4> */}
+      </div>
     </div>
   )
 

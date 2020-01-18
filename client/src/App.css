@@ -20,6 +20,7 @@
   position: absolute;
   transition: 0.2s;
   width: 20px;
+  margin-left: 50px;
 }
 
 .toggled {
@@ -29,4 +30,21 @@
 .dark-mode {
   color: #fff;
   background-color: #313843;
+}
+
+.switch {
+  margin-left: 50px;
+  width: 36px;
+  height: 18px;
+  background-color: blue;
+  border-radius: 50px;
+}
+
+.topNav {
+  /* display: flex; */
+  text-align: left;
+}
+
+h4 {
+  margin: 12px;
 }
