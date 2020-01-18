@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import axios from 'axios';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//hooks
+import DarkSwitch from './components/DarkSwitch';
+
+//components
+import Players from './components/Players';
+
+class App extends Component {
+
+  state = {
+    players : []
+  }
+
+  axiosFetch = () => {
+    axios
+    .get(`http://localhost:5000/api/players`)
+    .then(res =>{
+      console.log(res);
+      this.setState({players : res.data})
+    })
+    .catch(error => {
+      console.log(error);
+    })
+  }
+
+  componentDidMount() {
+    this.axiosFetch();
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <DarkSwitch />
+        <h1>Women's World Cup Players </h1>
+        <div className="cardContainer">
+          <div>
+            {this.state.players.map(player => 
+              <Players 
+                player={player} key={player.id}
+              />
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

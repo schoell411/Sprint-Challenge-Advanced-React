@@ -1,33 +1,70 @@
-.App {
-  text-align: center;
+
+
+h1 {
+  font-size: 50px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.dark-mode__toggle {
+  background: papayawhip;
+  border-radius: 50px;
+  border: 1px solid black;
+  height: 20px;
+  position: relative;
+  width: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.toggle {
+  background: black;
+  border-radius: 50px;
+  height: 18px;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+  width: 20px;
+  margin-left: 57px;
+}
+
+.toggled {
+  left: 18px;
+}
+
+.dark-mode {
+  color: #fff;
+  background-color: #313843;
+}
+
+.switch {
+  margin-left: 50px;
+  width: 36px;
+  height: 18px;
+  background-color: blue;
+  border-radius: 50px;
+}
+
+.topNav {
+  margin-top: 20px;
+  text-align: left;
+}
+
+h4 {
+  margin: 12px;
+}
+
+.playerCard {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: baseline;
+  /* padding: 30px; */
+  /* flex-direction: column; */
+  /* width: 20%; */
+  justify-content: baseline;
 }
 
-.App-link {
-  color: #61dafb;
+h1, h2, h4, h5 {
+  margin: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cardContainer {
+  display: flex;
+  font-size: 30px;
+  
 }
