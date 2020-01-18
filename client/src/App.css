@@ -1,6 +1,7 @@
-.App {
-  text-align: center;
-  /* background-color: papayawhip; */
+
+
+h1 {
+  font-size: 50px;
 }
 
 .dark-mode__toggle {
@@ -20,7 +21,7 @@
   position: absolute;
   transition: 0.2s;
   width: 20px;
-  margin-left: 50px;
+  margin-left: 57px;
 }
 
 .toggled {
@@ -41,10 +42,29 @@
 }
 
 .topNav {
-  /* display: flex; */
+  margin-top: 20px;
   text-align: left;
 }
 
 h4 {
   margin: 12px;
+}
+
+.playerCard {
+  display: flex;
+  align-items: baseline;
+  /* padding: 30px; */
+  /* flex-direction: column; */
+  /* width: 20%; */
+  justify-content: baseline;
+}
+
+h1, h2, h4, h5 {
+  margin: 30px;
+}
+
+.cardContainer {
+  display: flex;
+  font-size: 30px;
+  
 }

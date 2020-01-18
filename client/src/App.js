@@ -35,13 +35,14 @@ class App extends Component {
       <div className="App">
         <DarkSwitch />
         <h1>Women's World Cup Players </h1>
-        
-        <div>
-          {this.state.players.map(player => 
-            <Players 
-              player={player} key={player.id}
-            />
-          )}
+        <div className="cardContainer">
+          <div>
+            {this.state.players.map(player => 
+              <Players 
+                player={player} key={player.id}
+              />
+            )}
+          </div>
         </div>
       </div>
     );
